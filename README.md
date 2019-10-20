@@ -20,6 +20,7 @@
     - [Super resolution GAN](#srgan)
     - [Wassterstein GAN](#wgan)
     - [WGAN-GP](#wgan-gp)
+    - [DG-Net](#dg-net)
   - [Requirements and configuration](#requirements-and-configuration)
   - [Running the models](#running-the-models)
   - [What's the point of this repo?](#whats-the-point-of-this-repo)
@@ -235,6 +236,20 @@ takes a long time.
 
 ***
 
+### DG-Net
+> **_[Joint Discriminative and Generative Learning for Person Re-identification](https://arxiv.org/abs/1904.07223)_** (2019)
+
+[[Code](https://github.com/NVlabs/DG-Net)] [[Video](https://www.youtube.com/watch?v=ubCrEAIpQs4)][[Project](http://zdzheng.xyz/DG-Net/)]
+
+**_Quick summary_**: Person re-identification (re-id) remains challenging due to significant intra-class variations across different cameras. Recently, there has been a growing interest in using generative models to augment training data and enhance the invariance to input changes. The generative pipelines in existing methods, however, stay relatively separate from the discriminative re-id learning stages. Accordingly, re-id models are often trained in a straightforward manner on the generated data. In this paper, we seek to improve learned re-id embeddings by better leveraging the generated data. To this end, we propose a joint learning framework that couples re-id learning and data generation end-to-end. Our model involves a generative module that separately encodes each person into an appearance code and a structure code, and a discriminative module that shares the appearance encoder with the generative module. By switching the appearance or structure codes, the generative module is able to generate high-quality cross-id composed images, which are online fed back to the appearance encoder and used to improve the discriminative module. The proposed joint learning framework renders significant improvement over the baseline without using generated data, leading to the state-of-the-art performance on several benchmark datasets.
+
+<div align="center">
+<img width=720 height=480 src="https://github.com/NVlabs/DG-Net/blob/master/NxN.jpg?raw=true" /> 
+</div>
+
+<div align="right"> <b><a href="#">∧ Go to top</a></b> </div>
+
+***
 
 ## Requirements and configuration 
 I started doing this work with <b>[Pytorch](https://pytorch.org/) 0.4.0</b> and <b>Python 3.6</b> 
